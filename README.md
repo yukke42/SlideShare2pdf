@@ -1,6 +1,6 @@
 # SlideShare2pdf
 
-A Python Script to downloads 
+A Python Script to download slides from [SlideShare](https://www.slideshare.net/) and convert them to pdf.
 
 
 
