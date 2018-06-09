@@ -22,6 +22,15 @@ $ pipenv install
 
 
 
+## Usage
+
+```
+$ pipenv run python main.py https://www.slideshare.net/xxxx
+
+```
+
+
+
 ## Help
 
 - If you get erros like `cache resources exhausted `, you can resolve it by changing `/etc/ImageMagick-6/policy.xml`
