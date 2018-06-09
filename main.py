@@ -36,7 +36,7 @@ def main(slideshare_url: str):
     for i, image in enumerate(tqdm(images), start=1):
         image_url = image['data-full']
         image_filename = '{}-{}.jpg'.format(url_basename, i)
-        image_filepath = os.path.join('tmp', image_filename)
+        image_filepath = os.path.join(TMP_DIR, image_filename)
 
         if not os.path.exists(image_filepath):
             urllib.request.urlretrieve(image_url, filename=image_filepath)
@@ -60,7 +60,6 @@ def main(slideshare_url: str):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='A python script to help you back up your SlideShare presentations to PDF.')
-    parser.add_argument('-i', '--input',
-                        help='SlideShare URL to be processed,')
+    parser.add_argument('url', help='SlideShare URL to be processed,')
     args = parser.parse_args()
-    main(args.input)
+    main(args.url)
